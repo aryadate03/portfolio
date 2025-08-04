@@ -1,0 +1,865 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900 & display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #120212;
+    color: #ededed;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky {
+    background: none;
+}
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #120212;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active  {
+    color: #ff009d;
+
+}
+
+.home {
+    height: 100vh;
+    background: url('bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    justify-content: space-between;
+    
+}
+
+.home-content {
+     max-width: 600px;
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    overflow: hidden; 
+}
+
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    opacity: 0;  
+    transform: translateY(20px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.home-content h1.animated {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff009d;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff009d;
+    opacity: 0;  
+    transform: translateY(20px);  
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.home-content h3.animated {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    opacity: 0;  
+    transform: translateY(20px);  
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.home-content p.animated {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    opacity: 0; 
+    transform: translateY(20px);  
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.home-content .btn-box.animated {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #ff009d;
+    border: 2px solid #ff009d;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #ff009d;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #ff009d;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #ff009d;
+}
+
+.btn-box a:nth-child(2):hover {
+     color:#120212 ;
+}
+
+
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #120212;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;  
+    transform: translateY(20px);  
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+.home-sci.animated {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ff009d;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ff009d;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: #120212;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #ff009d;
+    z-index: -1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+.home-imgHover {
+   position: absolute;
+   top: 0;
+   right: 30px;
+   width: 550px;
+   height: 100%; 
+   background: transparent;
+   transition: 3s;
+}
+
+
+
+/*KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+.home-img img {
+    box-shadow: 0 0 40px rgb(255, 2, 116);
+}
+
+.home-img {
+    max-width: 400px;
+    position: relative;
+}
+
+.home-img img {
+    width: 100%;
+    filter: brightness(0.8) contrast(1.2); /* Optional: Adjust image contrast */
+}
+
+.about {
+    height: 100vh;
+    background: url('./FSD1.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the background covers the section */
+    background-position: center; /* Centers the background image */
+    background-attachment: scroll; /* Allows the background to scroll */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.heading span {
+    color: #ffff; 
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #007bff;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    animation: spin 5s linear infinite;
+}
+
+.circle-spin {
+    border: 2px solid transparent; /* Make the border transparent */
+}
+
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.about-content {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.about-content h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.btn-box {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #ff009d;
+}
+
+/* Skills Section */
+.skills {
+    min-height: auto;
+    padding: 7rem 10%;
+    background: url(./fsd.jpg) no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Heading */
+.skills .heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.skills .heading span {
+    color: #ff009d; /* Blue color for "Skills" */
+}
+
+/* Skills Row */
+.skills-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+/* Individual Skill Boxes */
+.skills-column {
+    flex: 1 1 45%;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect for Skill Boxes */
+.skills-column:hover {
+    transform: scale(1.05);
+}
+
+/* Title */
+.skills-column .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+/* Skills Box */
+.skills-box {
+    border: 2px solid #ff009d;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect for Skills Box */
+.skills-box:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+/* Progress Bars */
+.progress {
+    margin-bottom: 1rem;
+}
+
+/* Hover Effect on Progress Bars */
+.progress:hover h3 {
+    color: #ff009d;
+    transition: color 0.3s ease-in-out;
+}
+
+.progress h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Progress Bar Container */
+.progress .bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Progress Bar Fill */
+.progress .bar span {
+    display: block;
+    height: 100%;
+    background: #ff009d;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Hover Effect for Progress Bar Fill */
+.progress:hover .bar span {
+    background: #ff009d;
+}
+
+.Portfolio {
+    height: 100vh;
+    background: url('./FSD1.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the background covers the section */
+    background-position: center; /* Centers the background image */
+    background-attachment: scroll; /* Allows the background to scroll */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Portfolio Section */
+.Portfolio {
+    text-align: center;
+    padding-bottom: 10rem;
+}
+
+/* Heading */
+.Portfolio .heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.Portfolio .heading span {
+    color: #ff009d; /* Highlighted color */
+}
+
+/* Centering the Portfolio Box */
+.portfolio-container {
+    display: flex;
+    justify-content: center; /* Centering horizontally */
+    align-items: center; /* Centering vertically */
+    min-height: 50vh; /* Adjust height based on requirement */
+}
+
+/* Portfolio Box */
+.portfolio-box {
+    position: relative;
+    width: 400px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Portfolio Image */
+.portfolio-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures proper scaling */
+}
+
+/* Hover Effect */
+.portfolio-box:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay Effect */
+.portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #ff009d);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show Overlay on Hover */
+.portfolio-box:hover .portfolio-layer {
+    opacity: 1;
+}
+
+/* Portfolio Text */
+.portfolio-layer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-layer p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* External Link Icon */
+.portfolio-layer a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.portfolio-layer a:hover {
+    color: black;
+}
+
+.portfolio-layer h4 {
+    font-size: 3rem;
+}
+
+.portfolio-layer p {
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: #ededed;
+    border-radius: 50%;
+}
+
+.portfolio-layer a i {
+    font-size: 1.5rem;
+    color: #333;
+}
+/* Contact Section */
+.Contact {
+    min-height: 100vh;
+    padding: 5rem 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(./fsd.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+/* Section Heading */
+.Contact .heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.Contact .heading span {
+    color: #ff009d;
+}
+
+/* Contact Form */
+.Contact form {
+    width: 50rem;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Input Box - Flex for Side-by-Side Layout */
+.Contact form .input-box {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Each Input Field */
+.Contact form .input-box .input-field {
+    width: 50%;
+}
+
+/* Input Fields */
+.Contact form .input-box .input-field input,
+.Contact form .textarea-field textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: white;
+    background: transparent;
+    border: 2px solid #ff009d;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Message Box Full Width */
+.Contact form .textarea-field {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.Contact form .textarea-field textarea {
+    height: 12rem;
+    resize: none;
+}
+
+/* Placeholder Styling */
+.Contact form input::placeholder,
+.Contact form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Focus Effect */
+.Contact form .input-box .input-field input:focus,
+.Contact form .textarea-field textarea:focus {
+    border-color: #ff009d;
+    box-shadow: 0 0 10px rgba(255, 0, 157, 0.6);
+}
+
+/* Submit Button */
+.Contact form .btn-box {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.Contact form .btn-box .btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: none;
+    background: linear-gradient(90deg, #ff009d, #ff007b);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.Contact form .btn-box .btn:hover {
+    background: none;
+    color: #ff007b;
+    box-shadow: 0 0 10px rgba(255, 0, 157, 0.6);
+}
+
+.Contact form .input-box .input-field input,
+.Contact form .textarea-field textarea {
+    background-color: transparent !important;
+    color: white !important;  
+}
+
+
+.Contact form .input-box .input-field input:focus,
+.Contact form .textarea-field textarea:focus {
+    background-color: transparent !important;
+    border-color: #ff009d;
+    box-shadow: 0 0 10px rgba(255, 0, 157, 0.6);
+}
+
+.Contact form input::placeholder,
+.Contact form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Light white shade */
+}
+
+
+.Contact a {
+    background-color: transparent !important;
+    text-decoration: none;
+    color: inherit; 
+}
+
+.Contact a:visited,
+.Contact a:focus,
+.Contact a:active {
+    background-color: transparent !important;
+    outline: none;
+}
+
+.Contact a:hover {
+    background-color: transparent !important;
+}
+
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5rem 2%; 
+    background: url(./FSD1.jpg);
+}
+
+.footer-text p {
+    font-size: 1rem; 
+}
+
+.footer-iconTop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem; 
+    background: var(--main-color);
+    border: 0.10rem solid #ff007b; 
+    border-radius: 0.2rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.footer-iconTop a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.footer-iconTop a:hover::before {
+    width: 100%;
+}
+
+.footer-iconTop a i {
+    font-size: 1rem; 
+    color: #ff007b;
+    transition: 0.5s;
+}
+
+.footer-iconTop a:hover i {
+    color: var(--main-color);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
