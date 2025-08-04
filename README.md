@@ -1,10 +1,13 @@
 Personal Portfolio Website :-
+
 A modern, responsive personal portfolio website showcasing my skills, projects, and experience as a Frontend Developer.
 
-🎯 About
+🎯 About 
+
 This is my personal portfolio website built with pure HTML, CSS, and JavaScript. It showcases my journey as a Frontend Developer, highlighting my skills, projects, and professional experience. The website features a clean, modern design with smooth animations and responsive layout.
 
 ✨ Features
+
 Responsive Design: Fully responsive across all devices (desktop, tablet, mobile)
 Modern UI/UX: Clean and professional design with smooth animations
 Interactive Elements: Hover effects and dynamic content
@@ -26,6 +29,7 @@ Google Fonts: Typography enhancement
 
 
 GitHub: https://github.com/aryadate03
+
 LinkedIn: www.linkedin.com/in/aryadate03
 
 🙏 Acknowledgments
